@@ -1,99 +1,43 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Berita Viral & Penawaran Shopee</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      margin: 0;
-      padding-bottom: 80px; /* ruang untuk tombol sticky */
-      color: #333;
-    }
-    header {
-      background-color: #0078d7;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-    main {
-      max-width: 800px;
-      margin: 20px auto;
-      background-color: white;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-    h1 {
-      font-size: 1.6em;
-      margin-bottom: 10px;
-    }
-    p {
-      line-height: 1.6;
-    }
-    .btn {
-      display: inline-block;
-      background: #ff6600;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 10px 5px;
-    }
-    .btn:hover {
-      background: #ff3300;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.85em;
-      color: #777;
-      padding: 15px;
-    }
-    /* Tombol sticky Shopee */
-    .sticky-btn {
-      position: fixed;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 999;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Berita Viral</title>
+<style>
+  body{font-family:Arial;margin:0;padding-bottom:100px;background:#f5f5f5;color:#333;}
+  main{max-width:800px;margin:20px auto;background:#fff;padding:20px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.1);}
+  img{width:100%;border-radius:8px;margin-bottom:15px;}
+  h1{font-size:1.5em;margin-bottom:10px;}
+  p{line-height:1.6;}
+  a.btn{display:inline-block;background:#ff6600;color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;margin:10px 0;}
+  a.btn:hover{background:#ff3300;}
+  /* popup */
+  #popup{display:none;position:fixed;bottom:20px;right:20px;background:#ff6600;color:#fff;padding:15px 20px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.3);z-index:999;}
+  #popup a{color:#fff;font-weight:bold;text-decoration:underline;}
+  #popup button{background:none;border:none;color:#fff;font-weight:bold;margin-left:10px;cursor:pointer;}
+</style>
 </head>
 <body>
-  <header>
-    <h2>BERITA VIRAL HARI INI</h2>
-  </header>
+<main>
+  <img src="https://i.imgur.com/4Y0aX1B.jpg" alt="Thumbnail Video">
+  <h1>Data Terbaru Korban Tewas Ponpes Al-Khoziny Sidoarjo Jadi 37 Orang</h1>
+  <p>Pondok Pesantren Al-Khoziny di Sidoarjo ambruk. Tim SAR dan relawan terus melakukan pencarian korban.</p>
+  <a href="https://news.detik.com/berita/d-8145921/data-terbaru-korban-tewas-ponpes-al-khoziny-sidoarjo-ambruk-jadi-37-orang" target="_blank" class="btn">Baca Berita Lengkap</a>
+</main>
 
-  <main>
-    <!-- Thumbnail / Video TikTok -->
-    <img src="https://i.imgur.com/4Y0aX1B.jpg" alt="Thumbnail Video TikTok">
-    
-    <h1>Data Terbaru Korban Tewas Ponpes Al-Khoziny Sidoarjo Jadi 37 Orang</h1>
-    <p>Pondok Pesantren Al-Khoziny di Sidoarjo ambruk. Tim SAR dan relawan terus melakukan pencarian korban, sementara pihak berwenang menyelidiki penyebab utama runtuhnya bangunan.</p>
+<!-- Popup -->
+<div id="popup">
+  Cek promo Shopee terkait berita ini! 
+  <a href="https://s.shopee.co.id/9fC2EK5jIW" target="_blank">Klik di sini</a>
+  <button onclick="document.getElementById('popup').style.display='none'">✕</button>
+</div>
 
-    <hr>
-
-    <!-- Tombol Baca Berita -->
-    <a href="https://news.detik.com/berita/d-8145921/data-terbaru-korban-tewas-ponpes-al-khoziny-sidoarjo-ambruk-jadi-37-orang" target="_blank" class="btn">
-      Baca Berita Lengkap
-    </a>
-  </main>
-
-  <footer>
-    © 2025 Portal Viral ID | Sumber berita: Detik.com
-  </footer>
-
-  <!-- Tombol Shopee Sticky -->
-  <div class="sticky-btn">
-    <a href="https://s.shopee.co.id/9fC2EK5jIW" target="_blank" class="btn">Lihat Penawaran di Shopee</a>
-  </div>
+<script>
+  // Tampilkan popup 3 detik setelah halaman dibuka
+  setTimeout(function(){
+    document.getElementById('popup').style.display='block';
+  },3000);
+</script>
 </body>
 </html>
