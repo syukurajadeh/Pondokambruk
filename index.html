@@ -9,7 +9,7 @@
       font-family: Arial, sans-serif;
       background-color: #f5f5f5;
       margin: 0;
-      padding: 0;
+      padding-bottom: 80px; /* ruang untuk tombol sticky */
       color: #333;
     }
     header {
@@ -57,6 +57,14 @@
       color: #777;
       padding: 15px;
     }
+    /* Tombol sticky Shopee */
+    .sticky-btn {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+    }
   </style>
 </head>
 <body>
@@ -73,17 +81,19 @@
 
     <hr>
 
-    <!-- Tombol Shopee -->
-    <h3>🎁 Cek dulu penawaran menarik di Shopee!</h3>
-    <a href="https://s.shopee.co.id/9fC2EK5jIW" target="_blank" class="btn">Lihat Penawaran di Shopee</a>
-
-    <br>
-
     <!-- Tombol Baca Berita -->
-    <a href="https://news.detik.com/berita/d-8145921/data-terbaru-korban-tewas-ponpes-al-khoziny-sidoarjo-ambruk-jadi-37-orang" target="_blank" class="btn">Baca Berita Lengkap</a>
+    <a href="https://news.detik.com/berita/d-8145921/data-terbaru-korban-tewas-ponpes-al-khoziny-sidoarjo-ambruk-jadi-37-orang" target="_blank" class="btn">
+      Baca Berita Lengkap
+    </a>
   </main>
 
   <footer>
     © 2025 Portal Viral ID | Sumber berita: Detik.com
   </footer>
+
+  <!-- Tombol Shopee Sticky -->
+  <div class="sticky-btn">
+    <a href="https://s.shopee.co.id/9fC2EK5jIW" target="_blank" class="btn">Lihat Penawaran di Shopee</a>
+  </div>
 </body>
+</html>
